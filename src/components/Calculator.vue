@@ -94,7 +94,7 @@ export default {
     border-radius: 10px;
 }
 .calculator form input {
-    border: 0;
+    border:solid;
     outline: 0;
     width: 60px;
     height: 60px;
@@ -105,16 +105,19 @@ export default {
     color: white;
     margin: 10px;
     transition: background-color 0.3s ease, color 0.3s ease; 
+    text-align: center;
 }
 .calculator form input:active {
     background-color: rgba(255, 255, 255, 0.1); /* Change the background color when button is clicked */
   }
 form .display {
+    border:inset;
     display: flex;
     justify-content: flex-end;
     margin: 20px 0;
 }
 form .display input {
+    border:inset;
     text-align: right;
     flex: 1;
     font-size: 45px;
@@ -125,11 +128,30 @@ form input.equal {
 }
 form input.operator {
     color: #33ffd8;
+    text-align: center;
 }
 form input.clear {
     color: rgb(125, 237, 13);
+    text-align: center;
 }
 form input.equal {
     color: rgb(125, 237, 13);
 }
+@media (max-width: 768px) {
+    .calculator form input {
+        font-size: 20px;
+        text-align: center; /* Center the button text */
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        
+    }
+    form .display input {
+        border:inset;
+        text-align: right;
+        flex: 1;
+        font-size: 35px;
+        box-shadow: none;
+    }
+  }
 </style>
